@@ -1,0 +1,32 @@
+name: dbt_npb_player_profiles
+version: 1.0.0
+profile: dbt_npb_player_profiles
+model-paths:
+  - models
+analysis-paths:
+  - analyses
+test-paths:
+  - tests
+seed-paths:
+  - seeds
+macro-paths:
+  - macros
+snapshot-paths:
+  - snapshots
+clean-targets:
+  - target
+  - dbt_packages
+models:
+  dbt_npb_player_profiles:
+    staging:
+      +schema: staging
+      +materialized: view
+    intermediate:
+      +schema: intermediate
+      +materialized: view
+    marts:
+      +schema: marts
+      +materialized: table
+  elementary:
+    +schema: elementary
+target-path: target

@@ -1,0 +1,27 @@
+dbt_npb_player_profiles:
+  outputs:
+    dev:
+      dbname: postgres
+      host: localhost
+      pass: postgres
+      port: 5432
+      schema: public
+      threads: 1
+      type: postgres
+      user: postgres
+  target: dev
+
+elementary:
+  outputs:
+    dev:
+      dbname: postgres
+      host: localhost
+      pass: postgres
+      port: 5432
+      schema: public_elementary # elementary schema, usually [schema name]_elementary
+      threads: 1
+      type: postgres
+      user: postgres
+      keepalives_idle: 0
+      connect_timeout: 10
+  target: dev

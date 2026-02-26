@@ -1,0 +1,7 @@
+# dbt
+target/
+dbt_packages/
+logs/
+
+# Elementary CLI が作成する作業ディレクトリ
+edr_target/

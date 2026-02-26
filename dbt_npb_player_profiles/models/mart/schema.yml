@@ -1,0 +1,34 @@
+
+version: 2
+
+models:
+  - name: mart_height_weight
+    description: "Player height and weight rounded down."
+    config:
+      tags: ['mart']
+    columns:
+      - name: team
+        description: "チーム"
+        meta:
+          dimension:
+            label: "チーム"
+        tests:
+          - not_null
+      - name: full_name
+        description: "名前"
+        meta:
+          dimension:
+            label: "名前"
+          metrics:
+            total_player_count:
+              type: count
+      - name: height_floor
+        description: "身長（ 10 の位で切り捨て）"
+        meta:
+          dimension:
+            label: "身長（10cm単位）"
+      - name: weight_floor
+        description: "体重（ 10 の位で切り捨て）"
+        meta:
+          dimension:
+            label: "体重（10kg単位）"

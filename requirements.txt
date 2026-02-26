@@ -1,0 +1,5 @@
+dbt-core==1.11.6
+dbt-postgres==1.10.0
+sqlfluff==3.5.0
+elementary-data==0.22.0
+

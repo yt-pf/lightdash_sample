@@ -1,0 +1,54 @@
+
+version: 2
+
+models:
+  - name: stg_players
+    description: "Staging table for Players"
+    columns:
+      - name: team
+        description: "チーム"
+        meta:
+          dimension:
+            label: "チーム"
+        tests:
+          - not_null
+      - name: full_name
+        description: "名前"
+        meta:
+          dimension:
+            label: "名前"
+      - name: birth_year
+        description: "誕生年"
+        meta:
+          dimension:
+            label: "誕生年"
+      - name: birth_month
+        description: "誕生月"
+        meta:
+          dimension:
+            label: "誕生月"
+      - name: birth_day
+        description: "誕生日"
+        meta:
+          dimension:
+            label: "誕生日"
+      - name: height_cm
+        description: "身長"
+        meta:
+          dimension:
+            label: "身長"
+      - name: weight_kg
+        description: "体重"
+        meta:
+          dimension:
+            label: "体重"
+      - name: hometown
+        description: "出身地"
+        meta:
+          dimension:
+            label: "出身地"
+      - name: throw_bat
+        description: "投打"
+        meta:
+          dimension:
+            label: "投打"

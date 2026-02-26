@@ -1,0 +1,19 @@
+[sqlfluff]
+dialect = postgres
+exclude_rules = AM04, ST06, LT09, LT01, CV03, RF04, LT05, RF01, RF02, LT15
+max_line_length = 120
+
+[sqlfluff:indentation]
+tab_space_size = 2
+indented_joins = False
+indented_using_on = True
+template_blocks_indent = False
+
+[sqlfluff:rules.capitalization.keywords]
+capitalization_policy = lower
+
+[sqlfluff:rules.capitalization.functions]
+capitalization_policy = lower
+
+[sqlfluff:rules.capitalization.literals]
+capitalization_policy = lower
